@@ -15,6 +15,7 @@ class CashRegister
 
 
   def add_item(name, price, number=1)
+    @number = number
     @price = price
     @total += price.to_f * number
     if number > 1
@@ -40,7 +41,7 @@ class CashRegister
   end
 
   def void_last_transaction()
-    @total -= @price
+    @total -= (@price * @number)
     @total
 
   end
