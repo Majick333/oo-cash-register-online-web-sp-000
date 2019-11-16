@@ -25,7 +25,7 @@ class CashRegister
       end
     else
       @items << name
-      @transaction << @price
+      @transaction << @price.to_f
     end
   end
 
