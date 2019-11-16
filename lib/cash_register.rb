@@ -10,7 +10,7 @@ class CashRegister
     @total = 0
     @items = []
     @discount = discount
-    @transaction = []
+    #@transaction = []
   end
 
 
@@ -25,7 +25,7 @@ class CashRegister
       end
     else
       @items << name
-      @transaction << @total
+    #  @transaction <<
     end
   end
 
@@ -40,7 +40,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    @total -= @transaction.to_f
+    @total -= @price
   #  @total
 
   end
